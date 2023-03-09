@@ -1,0 +1,44 @@
+﻿eshop:   18 znaków "|"  nagłówek
+eshop:   12 znaków "|"  wiersz
+
+52008|1|K51|23042021|31072021|5.00|07|EUR||0000990496|6PLPLEUR|X|||||||
+|011030|200|||7,02|7,02|1|1||||
+|011030|300|||14,29|14,29|1|1||||
+|011030|500|||20,88|20,88|1|1||||
+-------------------------------------------------------------------------------
+
+kanał 01/03 i 04: 8 znaków "|" nagłówek
+kanał 01/03 i 04: 15 znaków "|" wiersz
+52008| 0|0051|23042021|31072021|9.0|07|EUR|
+|011030|200|Kalibracja suwmiarek i głęboko¶ciomierzy|7,02|||||||||||
+|123236|10,01-X|Wiertła z VHM GARANT Master Steel FEED W|328,36|273,64|  10|||||||||
+
+-------------------------------------------------------------------------------
+
+Rabatstuffen   18 znaków "|"  i na początku |2| w nagłówku
+Rabatstuffen   12 znaków "|"  w wierszu
+|2|K51|01082020|31072021||07|EUR|||MPLPLEUR||||||||
+|011030|3X200|||27,17|27,17|1|1||||
+|011030|200|||9,05|9,05|1|1||||
+|011030|300|||18,53|18,53|1|1||||
+
+-------------------------------------------------------------------------------
+
+var split = line.Split('|');      w eshop/kanał 010304/Rabatstuffen
+string itemNumber = split[1];	  w eshop/kanał 010304/Rabatstuffen
+string itemSize = split[2];		  w eshop/kanał 010304/Rabatstuffen
+string itemName = split[3];		  kanał 010304
+string itemPrice1 = split[5];	  w eshop/Rabatstuffen wymagane   # w 010304 split[4];	
+string itemPrice2 = split[6];	  w eshop/Rabatstuffen wymagane	  # w 010304 split[5] gdy jest ilość;	
+string itemAmount1 = split[7];	  w eshop/Rabatstuffen wymagane   # w 010304 domyślnie 1
+string itemAmount2 = split[8];	  w eshop/Rabatstuffen wymagane   # w 010304 split[6] wymagany Trim() gdy jest cena2
+
+-------------------------------------------------------------------------------
+
+supplierAID;priceAmount1;priceTyp1;lowerBound1;tax1;currency1;priceAmount2; priceTyp2; lowerBound2;tax2;currency2; dateTime1;dateTime2
+123225 3;480,83;net_customer;1;0.23;PLN;;;;;;2020-08-27;2021-07-31
+123225 4;480,83;net_customer;1;0.23;PLN;;;;;;2020-08-27;2021-07-31
+123225 5;480,83;net_customer;1;0.23;PLN;;;;;;2020-08-27;2021-07-31
+123225 3,0-X;677,88;net_customer;1;0.23;PLN;564,90;net_customer;8;0.23;PLN;2020-08-27;2021-07-31
+123225 3,76-X;677,88;net_customer;1;0.23;PLN;564,90;net_customer;8;0.23;PLN;2020-08-27;2021-07-31
+123225 6;480,83;net_customer;1;0.23;PLN;;;;;;2020-08-27;2021-07-31
